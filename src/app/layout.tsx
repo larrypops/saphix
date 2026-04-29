@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
 
 export const metadata: Metadata = {
   title: "SAPHIX SERVICE | Tourisme et événements au Cameroun",
   description:
-    "Découvrez le Cameroun autrement avec SAPHIX SERVICE: transport, tourisme privé, conciergerie et événements premium.",
+    "Découvrez le Cameroun autrement avec SAPHIX SERVICE. Votre guide de confiance pour le tourisme, les événements et les expériences authentiques à Douala et partout au Cameroun.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -30,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${manrope.variable} ${sora.variable} antialiased`}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

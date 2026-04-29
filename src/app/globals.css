@@ -1,40 +1,30 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 @theme {
-  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
 
-  --color-brand-night: #071b2f;
-  --color-brand-deep: #0a3d62;
-  --color-brand-gold: #f6c645;
-  --color-brand-red: #d93a39;
-  --color-brand-green: #2faa5c;
-  --color-brand-sand: #f7f3e8;
+  --color-brand-primary: #002B49;
+  --color-brand-secondary: #ff9f1c;
+  --color-brand-accent: #e63946;
+  --color-brand-light: #f1f5f9;
+  --color-brand-dark: #001A2C;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-
   body {
-    @apply bg-brand-sand text-brand-night font-sans;
+    @apply bg-white font-sans text-brand-dark;
   }
-
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     @apply font-display tracking-tight;
-  }
-}
-
-@layer components {
-  .panel {
-    @apply rounded-3xl border border-black/5 bg-white/80 shadow-[0_15px_35px_-20px_rgba(10,61,98,0.45)] backdrop-blur;
-  }
-
-  .chip {
-    @apply inline-flex items-center rounded-full px-4 py-1 text-xs font-bold uppercase tracking-[0.2em];
   }
 }
