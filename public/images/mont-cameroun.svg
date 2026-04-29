@@ -1,0 +1,22 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="night" x1="600" y1="0" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1B3A"/>
+      <stop offset="1" stop-color="#2D3250"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#night)"/>
+  <circle cx="920" cy="140" r="68" fill="#F4EBD0" opacity="0.9"/>
+  <path d="M0 590L320 590L600 230L900 590L1200 590V800H0V590Z" fill="#1C3A2B"/>
+  <path d="M420 590L600 320L780 590H420Z" fill="#2F5D42"/>
+  <path d="M560 360L600 320L640 360L620 400H580L560 360Z" fill="#F8F9FA"/>
+  <path d="M0 700C180 675 350 675 520 700C710 730 910 735 1200 705V800H0V700Z" fill="#12232E"/>
+  <g fill="#FFE66D" opacity="0.7">
+    <circle cx="120" cy="120" r="3"/>
+    <circle cx="200" cy="170" r="2.8"/>
+    <circle cx="320" cy="90" r="2.6"/>
+    <circle cx="470" cy="130" r="2.8"/>
+    <circle cx="700" cy="85" r="2.4"/>
+    <circle cx="840" cy="180" r="2.4"/>
+  </g>
+</svg>

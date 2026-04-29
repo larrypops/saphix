@@ -1,0 +1,81 @@
+{
+  "brand": {
+    "name": "SAPHIX SERVICE",
+    "slogan": "Votre partenaire premium pour découvrir le Cameroun",
+    "description": "SAPHIX SERVICE accompagne vos déplacements, vos visites et vos événements avec une approche fiable, élégante et 100% locale."
+  },
+  "contact": {
+    "phone": "+237 659 345 567",
+    "email": "contact@saphixservice.com",
+    "city": "Douala, Cameroun",
+    "whatsapp": "https://wa.me/237659345567"
+  },
+  "nav": [
+    { "href": "#services", "label": "Services" },
+    { "href": "#destinations", "label": "Destinations" },
+    { "href": "#apropos", "label": "À propos" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "services": [
+    {
+      "title": "Tourisme privé",
+      "description": "Circuits personnalisés à Douala, Kribi, Limbé et dans l’Ouest pour une immersion authentique.",
+      "accent": "gold"
+    },
+    {
+      "title": "Transport sécurisé",
+      "description": "Transferts ponctuels et confortables pour particuliers, équipes et délégations professionnelles.",
+      "accent": "green"
+    },
+    {
+      "title": "Organisation d’événements",
+      "description": "Coordination de mariages, anniversaires, événements corporate et expériences premium sur mesure.",
+      "accent": "red"
+    },
+    {
+      "title": "Conciergerie locale",
+      "description": "Accompagnement humain sur place: conseils, réservations et support terrain en temps réel.",
+      "accent": "dark"
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Douala",
+      "description": "Capitale économique, énergie urbaine, port et vie culturelle dynamique.",
+      "image": "/images/douala-port.svg",
+      "tag": "Business"
+    },
+    {
+      "name": "Kribi",
+      "description": "Plages de sable fin, détente en bord d’océan et ambiance tropicale.",
+      "image": "/images/kribi-plage.svg",
+      "tag": "Plage"
+    },
+    {
+      "name": "Mont Cameroun",
+      "description": "Panoramas volcaniques, aventure nature et air pur.",
+      "image": "/images/mont-cameroun.svg",
+      "tag": "Aventure"
+    },
+    {
+      "name": "Marchés & culture",
+      "description": "Artisanat, gastronomie et traditions qui font la richesse camerounaise.",
+      "image": "/images/marche-culture.svg",
+      "tag": "Culture"
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Clarisse N.",
+      "quote": "Équipe sérieuse, timing parfait et expérience inoubliable à Kribi."
+    },
+    {
+      "author": "Frédéric M.",
+      "quote": "Un accompagnement très professionnel pour notre événement d’entreprise à Douala."
+    },
+    {
+      "author": "Ariane T.",
+      "quote": "Service humain, réactif et très rassurant pour voyager au Cameroun."
+    }
+  ]
+}
