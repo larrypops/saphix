@@ -146,7 +146,7 @@ export default function Page() {
 
   const renderAccueil = () => (
     <>
-      <section className="relative flex h-screen items-center overflow-hidden">
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/ai-hero-cameroun.png"
@@ -156,33 +156,33 @@ export default function Page() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/60 to-transparent" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-6">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="mb-6 inline-block rounded-full border border-brand-secondary/30 bg-brand-secondary/20 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-brand-secondary backdrop-blur-sm">
+              <span className="mb-5 inline-block rounded-full border border-brand-secondary/30 bg-brand-secondary/20 px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-brand-secondary backdrop-blur-sm sm:text-sm">
                 ⭐ Guide de confiance au Cameroun
               </span>
-              <h1 className="mb-6 font-display text-5xl font-extrabold leading-[1.1] text-white lg:text-7xl">
+              <h1 className="mb-5 font-display text-3xl font-extrabold leading-[1.1] text-white sm:text-5xl lg:text-7xl">
                 Découvrez le Cameroun <span className="text-brand-secondary">autrement</span> avec SAPHIX SERVICE
               </h1>
-              <p className="mb-10 max-w-2xl text-xl leading-relaxed text-gray-200">
+              <p className="mb-8 max-w-2xl text-base leading-relaxed text-gray-200 sm:text-xl">
                 Explorez les plus belles destinations, vivez des expériences uniques et profitez d’un accompagnement professionnel pour tous vos déplacements et événements à Douala et partout au Cameroun.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <button
                   onClick={() => handlePageChange("contact")}
-                  className="flex items-center justify-center rounded-full bg-brand-secondary px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-brand-secondary/90"
+                  className="flex w-full items-center justify-center rounded-full bg-brand-secondary px-6 py-3.5 text-base font-bold text-white shadow-2xl transition-all hover:scale-105 hover:bg-brand-secondary/90 sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
                 >
                   Réserver une expérience
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </button>
                 <a
                   href="https://wa.me/237659345567"
-                  className="flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/20"
+                  className="flex w-full items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-base font-bold text-white backdrop-blur-md transition-all hover:bg-white/20 sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
                   Contact WhatsApp
@@ -193,15 +193,15 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-brand-light py-24">
-        <div className="container mx-auto mb-16 px-6 text-center">
+      <section className="bg-brand-light py-16 md:py-24">
+        <div className="container mx-auto mb-12 px-4 text-center sm:px-6 md:mb-16">
           <span className="mb-4 block text-sm font-bold uppercase tracking-widest text-brand-secondary">Excellence & Fiabilité</span>
-          <h2 className="mb-6 font-display text-4xl font-bold text-brand-dark lg:text-5xl">Pourquoi choisir SAPHIX SERVICE ?</h2>
+          <h2 className="mb-6 font-display text-3xl font-bold text-brand-dark sm:text-4xl lg:text-5xl">Pourquoi choisir SAPHIX SERVICE ?</h2>
           <p className="mx-auto max-w-2xl text-lg italic text-gray-600">
             "Nous ne proposons pas juste des services… Nous créons des expériences mémorables."
           </p>
         </div>
-        <div className="container mx-auto grid gap-8 px-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="container mx-auto grid gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
           {REASONS.map((reason, i) => (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -209,7 +209,7 @@ export default function Page() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               key={reason.text}
-              className="group flex items-center rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-brand-secondary/30 hover:shadow-lg"
+              className="group flex items-center rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all hover:border-brand-secondary/30 hover:shadow-lg sm:p-6"
             >
               <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-secondary/10 text-brand-secondary transition-colors group-hover:bg-brand-secondary group-hover:text-white">
                 {reason.icon}
@@ -220,16 +220,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="services" className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h2 className="mb-6 font-display text-4xl font-bold text-brand-dark lg:text-5xl">Nos Services</h2>
+      <section id="services" className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+            <h2 className="mb-6 font-display text-3xl font-bold text-brand-dark sm:text-4xl lg:text-5xl">Nos Services</h2>
             <p className="text-lg text-gray-600">
               Des solutions complètes pour faciliter vos voyages et rendre vos événements inoubliables au Cameroun.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((service, i) => (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -238,7 +238,7 @@ export default function Page() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 whileHover={{ y: -10 }}
                 key={service.id}
-                className="rounded-3xl border border-gray-100 bg-white p-8 shadow-xl transition-all hover:shadow-2xl"
+                className="rounded-3xl border border-gray-100 bg-white p-6 shadow-xl transition-all hover:shadow-2xl sm:p-8"
               >
                 <div className={`mb-6 flex h-16 w-16 items-center justify-center rounded-2xl ${service.color}`}>
                   {service.icon}
@@ -257,22 +257,22 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="destinations" className="overflow-hidden bg-brand-dark py-24 text-white">
-        <div className="container mx-auto mb-16 px-6 text-center">
-          <h2 className="mb-6 font-display text-4xl font-bold lg:text-5xl">Explorez le Cameroun</h2>
+      <section id="destinations" className="overflow-hidden bg-brand-dark py-16 text-white md:py-24">
+        <div className="container mx-auto mb-12 px-4 text-center sm:px-6 md:mb-16">
+          <h2 className="mb-6 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">Explorez le Cameroun</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-400">
             De l'animation urbaine de Douala aux plages sereines de Kribi, découvrez la diversité incroyable de l'Afrique en miniature.
           </p>
         </div>
 
-        <div className="container mx-auto grid gap-6 px-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="container mx-auto grid gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
           {DESTINATIONS.map((dest, i) => (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               key={dest.id}
-              className="group relative h-[400px] cursor-pointer overflow-hidden rounded-3xl"
+              className="group relative h-[300px] cursor-pointer overflow-hidden rounded-3xl sm:h-[360px] lg:h-[400px]"
             >
               <img
                 src={dest.image}
@@ -280,7 +280,7 @@ export default function Page() {
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 w-full p-8">
+              <div className="absolute bottom-0 left-0 w-full p-5 sm:p-8">
                 <div className="mb-3 flex gap-2">
                   {dest.tags.map((tag) => (
                     <span
@@ -291,8 +291,8 @@ export default function Page() {
                     </span>
                   ))}
                 </div>
-                <h3 className="mb-1 text-2xl font-bold">{dest.name}</h3>
-                <p className="translate-y-2 text-sm text-gray-300 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <h3 className="mb-1 text-xl font-bold sm:text-2xl">{dest.name}</h3>
+                <p className="text-sm text-gray-300 opacity-100 transition-all duration-300 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
                   {dest.desc}
                 </p>
               </div>
@@ -301,10 +301,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 font-display text-4xl font-bold text-brand-dark lg:text-5xl">Comment ça fonctionne ?</h2>
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="mb-12 text-center md:mb-16">
+            <h2 className="mb-6 font-display text-3xl font-bold text-brand-dark sm:text-4xl lg:text-5xl">Comment ça fonctionne ?</h2>
           </div>
 
           <div className="relative grid gap-8 md:grid-cols-4">
@@ -327,10 +327,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-brand-primary py-24 text-white">
-        <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 font-display text-4xl font-bold lg:text-5xl">Ils nous font confiance</h2>
+      <section className="bg-brand-primary py-16 text-white md:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="mb-12 text-center md:mb-16">
+            <h2 className="mb-6 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">Ils nous font confiance</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -338,7 +338,7 @@ export default function Page() {
               { q: "Ponctuel, fiable et très organisé. Un vrai plaisir.", n: "Jean-Pierre E." },
               { q: "Je recommande SAPHIX SERVICE à 100%. Tout était parfait.", n: "Sarah B." },
             ].map((t, i) => (
-              <div key={i} className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-md">
+              <div key={i} className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-md sm:p-8">
                 <div className="mb-6 flex text-brand-secondary">{[...Array(5)].map((_, j) => <span key={j}>★</span>)}</div>
                 <p className="mb-6 text-lg italic">“{t.q}”</p>
                 <p className="font-bold">{t.n}</p>
@@ -348,16 +348,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-brand-secondary py-24 text-center text-white">
-        <div className="container mx-auto px-6">
-          <h2 className="mb-8 font-display text-4xl font-black lg:text-5xl">Prêt à vivre une expérience unique ?</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-xl opacity-90">
+      <section className="bg-brand-secondary py-16 text-center text-white md:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="mb-8 font-display text-3xl font-black sm:text-4xl lg:text-5xl">Prêt à vivre une expérience unique ?</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-base opacity-90 sm:text-xl">
             Contactez-nous maintenant et laissez-nous organiser votre prochain déplacement ou séjour.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="https://wa.me/237659345567"
-              className="flex items-center justify-center rounded-full bg-brand-dark px-10 py-5 text-xl font-bold text-white"
+              className="flex w-full items-center justify-center rounded-full bg-brand-dark px-8 py-4 text-lg font-bold text-white sm:w-auto sm:px-10 sm:py-5 sm:text-xl"
             >
               <WhatsAppIcon className="mr-3 h-6 w-6" /> WhatsApp
             </a>
@@ -365,7 +365,7 @@ export default function Page() {
               onClick={() => {
                 window.location.href = "tel:+237659345567";
               }}
-              className="flex items-center justify-center rounded-full bg-white px-10 py-5 text-xl font-bold text-brand-secondary"
+              className="flex w-full items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-brand-secondary sm:w-auto sm:px-10 sm:py-5 sm:text-xl"
             >
               <Phone className="mr-3 h-6 w-6" /> Appeler maintenant
             </button>
@@ -376,21 +376,21 @@ export default function Page() {
   );
 
   const renderAbout = () => (
-    <div className="pb-24 pt-32">
-      <div className="container mx-auto px-6">
+    <div className="pb-16 pt-28 md:pb-24 md:pt-32">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mx-auto max-w-4xl"
         >
-          <h1 className="mb-8 font-display text-5xl font-extrabold text-brand-dark lg:text-6xl">À propos de SAPHIX SERVICE</h1>
+          <h1 className="mb-8 font-display text-3xl font-extrabold text-brand-dark sm:text-5xl lg:text-6xl">À propos de SAPHIX SERVICE</h1>
           <div className="prose prose-xl space-y-6 text-gray-600">
-            <p className="text-xl leading-relaxed">
+            <p className="text-lg leading-relaxed sm:text-xl">
               SAPHIX SERVICE est une entreprise basée à Douala, spécialisée dans le tourisme, l’accompagnement et les services personnalisés au Cameroun.
             </p>
-            <div className="my-12 rounded-3xl border-l-8 border-brand-secondary bg-brand-secondary/10 p-8">
+            <div className="my-12 rounded-3xl border-l-8 border-brand-secondary bg-brand-secondary/10 p-6 sm:p-8">
               <h3 className="mb-4 font-display text-2xl font-bold text-brand-dark">Notre mission :</h3>
-              <p className="text-2xl font-medium italic text-brand-dark">
+              <p className="text-xl font-medium italic text-brand-dark sm:text-2xl">
                 👉 Offrir des expériences authentiques, fiables et professionnelles à chaque client.
               </p>
             </div>
@@ -403,14 +403,14 @@ export default function Page() {
                 "Faire découvrir les meilleures destinations",
                 "Offrir un accompagnement de qualité",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-6">
+                <li key={item} className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-4 sm:items-center sm:p-6">
                   <CheckCircle2 className="shrink-0 text-brand-secondary" />
                   <span className="font-bold text-brand-dark">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-20 grid gap-12 md:grid-cols-2">
+            <div className="mt-14 grid gap-10 md:mt-20 md:gap-12 md:grid-cols-2">
               <div>
                 <h3 className="mb-6 font-display text-3xl font-bold text-brand-dark">Notre vision</h3>
                 <p className="text-lg">Devenir une référence dans le tourisme et l’accompagnement au Cameroun.</p>
@@ -434,17 +434,17 @@ export default function Page() {
   );
 
   const renderContact = () => (
-    <div className="bg-gray-50 pb-24 pt-32">
-      <div className="container mx-auto px-6">
+    <div className="bg-gray-50 pb-16 pt-28 md:pb-24 md:pt-32">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-16 lg:flex-row">
+          <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:gap-16">
             <div className="lg:w-1/2">
-              <h1 className="mb-8 font-display text-5xl font-extrabold tracking-tighter text-brand-dark lg:text-6xl">Contactez-nous</h1>
-              <p className="mb-12 text-xl text-gray-600">
+              <h1 className="mb-8 font-display text-3xl font-extrabold tracking-tighter text-brand-dark sm:text-5xl lg:text-6xl">Contactez-nous</h1>
+              <p className="mb-10 text-lg text-gray-600 sm:mb-12 sm:text-xl">
                 Vous avez un projet, un déplacement ou une expérience à organiser ? Nous sommes disponibles pour vous accompagner.
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-5 sm:space-y-8">
                 {[
                   { icon: <MapPin />, label: "Localisation", val: "Douala, Cameroun" },
                   { icon: <Phone />, label: "Téléphone", val: "+237 659 345 567" },
@@ -455,7 +455,7 @@ export default function Page() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 + 0.3 }}
                     key={item.label}
-                    className="flex items-center gap-6 rounded-3xl border border-gray-100 bg-white p-6 shadow-sm"
+                    className="flex items-center gap-4 rounded-3xl border border-gray-100 bg-white p-4 shadow-sm sm:gap-6 sm:p-6"
                   >
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary">
                       {item.icon}
@@ -468,8 +468,8 @@ export default function Page() {
                 ))}
               </div>
 
-              <div className="mt-12 rounded-[40px] bg-brand-dark p-8 text-white">
-                <h3 className="mb-6 flex items-center text-2xl font-bold">
+              <div className="mt-10 rounded-[32px] bg-brand-dark p-6 text-white sm:mt-12 sm:rounded-[40px] sm:p-8">
+                <h3 className="mb-6 flex items-center text-xl font-bold sm:text-2xl">
                   <MessageCircle className="mr-3 text-brand-secondary" /> WhatsApp
                 </h3>
                 <p className="mb-8 leading-relaxed text-gray-400">
@@ -477,7 +477,7 @@ export default function Page() {
                 </p>
                 <a
                   href="https://wa.me/237659345567"
-                  className="inline-flex items-center rounded-2xl bg-[#25D366] px-8 py-4 text-lg font-bold text-white transition-transform hover:scale-105"
+                  className="inline-flex w-full items-center justify-center rounded-2xl bg-[#25D366] px-6 py-3.5 text-base font-bold text-white transition-transform hover:scale-105 sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
                 >
                   Discuter maintenant <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
@@ -485,14 +485,14 @@ export default function Page() {
             </div>
 
             <div className="lg:w-1/2">
-              <div className="rounded-[50px] border border-gray-100 bg-white p-10 shadow-2xl lg:p-14">
-                <h2 className="mb-10 font-display text-3xl font-bold text-brand-dark">Envoyez un message</h2>
+              <div className="rounded-[32px] border border-gray-100 bg-white p-6 shadow-2xl sm:p-10 sm:rounded-[50px] lg:p-14">
+                <h2 className="mb-8 font-display text-2xl font-bold text-brand-dark sm:mb-10 sm:text-3xl">Envoyez un message</h2>
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="space-y-2">
                     <label className="ml-1 text-sm font-bold text-gray-400">NOM COMPLET</label>
                     <input
                       type="text"
-                      className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-5 outline-none transition-colors focus:border-brand-secondary"
+                      className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-4 outline-none transition-colors focus:border-brand-secondary sm:p-5"
                     />
                   </div>
                   <div className="grid gap-6 md:grid-cols-2">
@@ -500,14 +500,14 @@ export default function Page() {
                       <label className="ml-1 text-sm font-bold text-gray-400">TÉLÉPHONE</label>
                       <input
                         type="tel"
-                        className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-5 outline-none transition-colors focus:border-brand-secondary"
+                        className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-4 outline-none transition-colors focus:border-brand-secondary sm:p-5"
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="ml-1 text-sm font-bold text-gray-400">EMAIL</label>
                       <input
                         type="email"
-                        className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-5 outline-none transition-colors focus:border-brand-secondary"
+                        className="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 p-4 outline-none transition-colors focus:border-brand-secondary sm:p-5"
                       />
                     </div>
                   </div>
@@ -515,16 +515,16 @@ export default function Page() {
                     <label className="ml-1 text-sm font-bold text-gray-400">VOTRE DEMANDE</label>
                     <textarea
                       rows={5}
-                      className="w-full resize-none rounded-2xl border-2 border-gray-100 bg-gray-50 p-5 outline-none transition-colors focus:border-brand-secondary"
+                      className="w-full resize-none rounded-2xl border-2 border-gray-100 bg-gray-50 p-4 outline-none transition-colors focus:border-brand-secondary sm:p-5"
                     />
                   </div>
-                  <button className="group flex w-full items-center justify-center rounded-2xl bg-brand-primary py-6 text-xl font-black text-white shadow-xl transition-colors hover:bg-brand-dark">
+                  <button className="group flex w-full items-center justify-center rounded-2xl bg-brand-primary py-4 text-lg font-black text-white shadow-xl transition-colors hover:bg-brand-dark sm:py-6 sm:text-xl">
                     Envoyer <Send className="ml-3 h-6 w-6 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                   </button>
                 </form>
               </div>
 
-              <div className="mt-12 h-64 overflow-hidden rounded-[40px] shadow-xl">
+              <div className="mt-10 h-56 overflow-hidden rounded-[28px] shadow-xl sm:mt-12 sm:h-64 sm:rounded-[40px]">
                 <img src="/images/ai-yaounde.png" alt="Carte stylisée Cameroun" className="h-full w-full object-cover" />
               </div>
             </div>
@@ -539,15 +539,15 @@ export default function Page() {
       <nav
         className={`fixed z-50 w-full transition-all duration-500 ${scrolled || currentPage !== "accueil" ? "bg-white py-2 shadow-xl" : "bg-transparent py-5"}`}
       >
-        <div className="container mx-auto flex items-center justify-between px-6">
+        <div className="container mx-auto flex items-center justify-between px-4 sm:px-6">
           <button onClick={() => handlePageChange("accueil")} className="group flex items-center space-x-2">
             <img
               src="/images/logo.jpg"
               alt="Logo SAPHIX"
-              className="h-10 w-10 rounded-xl border border-white/20 object-cover shadow-lg transition-transform group-hover:rotate-6"
+              className="h-9 w-9 rounded-xl border border-white/20 object-cover shadow-lg transition-transform group-hover:rotate-6 sm:h-10 sm:w-10"
             />
             <span
-              className={`font-display text-xl font-bold tracking-tighter ${scrolled || currentPage !== "accueil" ? "text-brand-dark" : "text-white"}`}
+              className={`font-display text-base font-bold tracking-tighter sm:text-xl ${scrolled || currentPage !== "accueil" ? "text-brand-dark" : "text-white"}`}
             >
               SAPHIX SERVICE
             </span>
@@ -590,10 +590,10 @@ export default function Page() {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            className="fixed inset-0 z-[60] flex flex-col justify-center bg-brand-dark p-12 text-white lg:hidden"
+            className="fixed inset-0 z-[60] flex flex-col justify-center bg-brand-dark p-6 text-white sm:p-10 lg:hidden"
           >
             <button
-              className="absolute right-8 top-8 rounded-full bg-white/10 p-4"
+              className="absolute right-5 top-5 rounded-full bg-white/10 p-3 sm:right-8 sm:top-8 sm:p-4"
               onClick={() => setIsMenuOpen(false)}
             >
               <X size={32} />
@@ -602,7 +602,7 @@ export default function Page() {
               {navLinks.map((link) => (
                 <button
                   key={link.id}
-                  className={`group flex items-center justify-between text-left font-display text-5xl font-black ${currentPage === link.id ? "text-brand-secondary" : ""}`}
+                  className={`group flex items-center justify-between text-left font-display text-3xl font-black sm:text-5xl ${currentPage === link.id ? "text-brand-secondary" : ""}`}
                   onClick={() => handlePageChange(link.id)}
                 >
                   {link.name}
@@ -612,7 +612,7 @@ export default function Page() {
               <div className="space-y-6 pt-10">
                 <a
                   href="https://wa.me/237659345567"
-                  className="flex w-full items-center justify-center rounded-3xl bg-[#25D366] py-6 text-2xl font-black text-white"
+                  className="flex w-full items-center justify-center rounded-3xl bg-[#25D366] py-4 text-xl font-black text-white sm:py-6 sm:text-2xl"
                 >
                   <WhatsAppIcon className="mr-4 h-8 w-8" /> WhatsApp
                 </a>
@@ -638,15 +638,15 @@ export default function Page() {
         </AnimatePresence>
       </main>
 
-      <footer className="border-t border-white/5 bg-brand-dark py-20 text-white">
-        <div className="container mx-auto px-6">
-          <div className="mb-20 grid gap-16 md:grid-cols-2 lg:grid-cols-4">
+      <footer className="border-t border-white/5 bg-brand-dark py-14 text-white md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="mb-12 grid gap-10 md:mb-20 md:grid-cols-2 md:gap-14 lg:grid-cols-4 lg:gap-16">
             <div className="space-y-8">
               <div className="flex items-center space-x-2">
-                <img src="/images/logo.jpg" alt="Logo SAPHIX" className="h-12 w-12 rounded-2xl border border-white/15 object-cover shadow-xl" />
-                <span className="font-display text-2xl font-black tracking-tight">SAPHIX SERVICE</span>
+                <img src="/images/logo.jpg" alt="Logo SAPHIX" className="h-10 w-10 rounded-2xl border border-white/15 object-cover shadow-xl sm:h-12 sm:w-12" />
+                <span className="font-display text-xl font-black tracking-tight sm:text-2xl">SAPHIX SERVICE</span>
               </div>
-              <p className="text-lg leading-relaxed text-gray-400">
+              <p className="text-base leading-relaxed text-gray-400 sm:text-lg">
                 Le partenaire de choix pour explorer le Cameroun et réussir vos événements. Authenticité et professionnalisme garantis.
               </p>
               <div className="flex space-x-6">
@@ -657,10 +657,10 @@ export default function Page() {
             </div>
 
             <div>
-              <h4 className="mb-10 flex items-center font-display text-xl font-black text-white">
+              <h4 className="mb-6 flex items-center font-display text-xl font-black text-white md:mb-10">
                 Navigation <span className="ml-3 block h-1 w-10 bg-brand-secondary" />
               </h4>
-              <ul className="space-y-5 text-lg text-gray-400">
+              <ul className="space-y-4 text-base text-gray-400 sm:text-lg">
                 {navLinks.map((l) => (
                   <li key={l.id}>
                     <button onClick={() => handlePageChange(l.id)} className="transition-all hover:translate-x-2 hover:text-brand-secondary">
@@ -672,10 +672,10 @@ export default function Page() {
             </div>
 
             <div>
-              <h4 className="mb-10 flex items-center font-display text-xl font-black text-white">
+              <h4 className="mb-6 flex items-center font-display text-xl font-black text-white md:mb-10">
                 Services <span className="ml-3 block h-1 w-10 bg-brand-secondary" />
               </h4>
-              <ul className="space-y-5 text-lg text-gray-400">
+              <ul className="space-y-4 text-base text-gray-400 sm:text-lg">
                 {SERVICES.map((s) => (
                   <li key={s.id}>
                     <button onClick={() => handlePageChange("accueil")} className="transition-all hover:text-brand-secondary">
@@ -687,10 +687,10 @@ export default function Page() {
             </div>
 
             <div>
-              <h4 className="mb-10 flex items-center font-display text-xl font-black text-white">
+              <h4 className="mb-6 flex items-center font-display text-xl font-black text-white md:mb-10">
                 Contact <span className="ml-3 block h-1 w-10 bg-brand-secondary" />
               </h4>
-              <ul className="space-y-6 text-lg text-gray-400">
+              <ul className="space-y-5 text-base text-gray-400 sm:text-lg">
                 <li className="flex items-start gap-4"><MapPin className="shrink-0 text-brand-secondary" /> Douala, Cameroun</li>
                 <li className="flex items-start gap-4"><Phone className="shrink-0 text-brand-secondary" /> +237 659 345 567</li>
                 <li className="flex items-start gap-4"><Mail className="shrink-0 text-brand-secondary" /> contact@saphix.com</li>
@@ -698,7 +698,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="border-t border-white/5 pt-10 text-center text-xs font-bold tracking-wider text-gray-500">
+          <div className="border-t border-white/5 pt-8 text-center text-xs font-bold tracking-wider text-gray-500 md:pt-10">
             <p className="uppercase">© {new Date().getFullYear()} SAPHIX SERVICE. TOUS DROITS RÉSERVÉS.</p>
           </div>
         </div>
@@ -706,10 +706,10 @@ export default function Page() {
 
       <a
         href="https://wa.me/237659345567"
-        className="group fixed bottom-10 right-10 z-50 flex items-center overflow-hidden rounded-[2.5rem] bg-[#25D366] p-6 text-white shadow-2xl transition-all hover:scale-110 active:scale-95"
+        className="group fixed bottom-5 right-5 z-50 flex items-center overflow-hidden rounded-[2.5rem] bg-[#25D366] p-4 text-white shadow-2xl transition-all hover:scale-110 active:scale-95 sm:bottom-8 sm:right-8 sm:p-5"
       >
         <WhatsAppIcon className="h-8 w-8" />
-        <span className="max-w-0 overflow-hidden whitespace-nowrap text-lg font-black transition-all duration-700 group-hover:ml-4 group-hover:max-w-xs">
+        <span className="hidden max-w-0 overflow-hidden whitespace-nowrap text-lg font-black transition-all duration-700 group-hover:ml-4 group-hover:max-w-xs sm:inline-block">
           Besoin d'aide ?
         </span>
       </a>
