@@ -44,35 +44,35 @@ const DESTINATIONS = [
     id: 1,
     name: "Douala",
     desc: "économique & moderne",
-    image: "/images/generated-douala.svg",
+    image: "/images/ai-douala.png",
     tags: ["Business", "City Life"],
   },
   {
     id: 2,
     name: "Kribi",
     desc: "plages & détente",
-    image: "/images/generated-kribi.svg",
+    image: "/images/ai-kribi.png",
     tags: ["Beach", "Relax"],
   },
   {
     id: 3,
     name: "Limbé",
     desc: "nature & volcan",
-    image: "/images/generated-limbe.svg",
+    image: "/images/ai-limbe.png",
     tags: ["Nature", "Hiking"],
   },
   {
     id: 4,
     name: "Yaoundé",
     desc: "capitale & culture",
-    image: "/images/generated-yaounde.svg",
+    image: "/images/ai-yaounde.png",
     tags: ["Culture", "Gov Hub"],
   },
   {
     id: 5,
     name: "Ouest Cameroun",
     desc: "montagnes & traditions",
-    image: "/images/generated-ouest.svg",
+    image: "/images/ai-ouest-cameroun.png",
     tags: ["Heritage", "Scenic"],
   },
 ];
@@ -149,7 +149,7 @@ export default function Page() {
       <section className="relative flex h-screen items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/generated-hero-cameroun.svg"
+            src="/images/ai-hero-cameroun.png"
             alt="Paysage du Cameroun"
             className="h-full w-full scale-105 object-cover"
           />
@@ -525,7 +525,7 @@ export default function Page() {
               </div>
 
               <div className="mt-12 h-64 overflow-hidden rounded-[40px] shadow-xl">
-                <img src="/images/generated-yaounde.svg" alt="Carte stylisée Cameroun" className="h-full w-full object-cover" />
+                <img src="/images/ai-yaounde.png" alt="Carte stylisée Cameroun" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>
